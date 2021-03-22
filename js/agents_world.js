@@ -2,7 +2,7 @@ let AgentsWorld = function(numRows, numColumns, canvasWidth, canvasHeight) {
   this.worldCanvas = new WorldCanvas(canvasWidth, canvasHeight);
   this.numRows = numRows;
   this.numColumns = numColumns;
-  this.cellXWidth = Math.floor(canvasWidth / numRows);
+  this.cellXWidth = Math.floor(canvasWidth / numColumns);
   this.cellYWidth = Math.floor(canvasWidth / numRows);
 
   this.initGrid = function() {
