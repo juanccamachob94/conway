@@ -9,8 +9,8 @@ var tileX, tileY;
 
 // variables relacionadas con el tablero
 var tablero;
-var filas = 100; // here
-var columnas = 100;
+var filas = 250; // here
+var columnas = 250;
 var blanco = '#FFF';
 var negro = '#000';
 
