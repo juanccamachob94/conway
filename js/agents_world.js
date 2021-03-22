@@ -33,7 +33,7 @@ let AgentsWorld = function(numRows, numColumns, canvasWidth, canvasHeight) {
     // prepare the mutation on the next step
     for(i = 0; i < numRows; i++)
       for(j = 0; j < numColumns; j++)
-        this.grid[i][j].prepareMutation();
+        this.grid[i][j].calculateNextStatus();
 
     // mutate agents
     for(i = 0; i < numRows; i++)
@@ -47,10 +47,12 @@ let AgentsWorld = function(numRows, numColumns, canvasWidth, canvasHeight) {
   }
 
   this.drawAgent = function(agent) {
-    color = agent.getColor();
-    this.worldCanvas.context.fillStyle = color;
-
-    this.worldCanvas.context.fillRect(agent.x * this.cellXWidth, agent.y * this.cellYWidth,
-      this.cellXWidth, this.cellYWidth);
+    this.worldCanvas.fillRect(
+      agent.status == 1 ? '#FFF' : '#000',
+      agent.x * this.cellXWidth,
+      agent.y * this.cellYWidth,
+      this.cellXWidth,
+      this.cellYWidth
+    )
   }
 }

@@ -8,4 +8,9 @@ let WorldCanvas = function(width, height) {
     canvas.width = canvas.width;
     canvas.height = canvas.height;
   }
+
+  this.fillRect = function(color, x, y, width, height) {
+    this.context.fillStyle = color;
+    this.context.fillRect(x, y, width, height);
+  }
 }
